@@ -9,6 +9,7 @@ import {JwtStrategy} from "./jwt-strategy";
 
 @Module({
   imports: [
+      PassportModule.register({ defaultStrategy: 'jwt' }),
       JwtModule.register({
           secret: 'topSecret51',
           signOptions: {
@@ -16,7 +17,6 @@ import {JwtStrategy} from "./jwt-strategy";
 
           }
       }),
-      PassportModule.register({ defaultStrategy: 'jwt' }),
       TypeOrmModule.forFeature([UserRepository])
   ],
   controllers: [AuthController],
