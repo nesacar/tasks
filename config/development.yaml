@@ -1,0 +1,6 @@
+db:
+  synchronize: false
+
+jwt:
+  expiresIn: 3600
+  secret: 'topSecret51'
